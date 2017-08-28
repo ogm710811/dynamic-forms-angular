@@ -92,15 +92,12 @@ export class AppComponent implements OnDestroy, AfterViewInit, OnChanges {
 
 
   removeComponent() {
-    if (!this.isOn) {
       console.log(this.componentRef);
       const length = this.componentRef.length;
       this.componentRef[length - 1].destroy();
       console.log(this.componentRef);
       this.componentRef.pop();
       console.log(this.componentRef);
-    }
-    this.isOn = true;
   }
 
   ngOnDestroy() {
